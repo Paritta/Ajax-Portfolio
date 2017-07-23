@@ -24,8 +24,6 @@ const Button = styled.button`
     border-radius: 3px;
     font-size: 1.2em;
     margin-top: 2rem;
-    margin-bottom: 5rem;
-    display: inline-block;
 `
 
 export default Home
