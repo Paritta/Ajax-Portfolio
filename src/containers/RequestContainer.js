@@ -1,45 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import request from 'request';
-import url from '../config/url';
+import { bindActionCreators } from 'redux';
+import * as requestActions from '../modules/request';
 
 class RequestContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: ''
-        };
-    }
 
-    // componentDidMount() {
-    //     request({url: url, method: 'GET'}, 
-    //     (error, response, body) => 
-    //     // { console.log('Reponse received', JSON.parse(body).list); });
-    //     {  data.push(JSON.parse(body).list) });
-    // }
-
-    _handleData = () => {
-        request({url: url, method: 'GET'}, 
-        (error, response, body) => 
-        // { console.log('Reponse received', JSON.parse(body).list); });
-        {  this.state.d = JSON.parse(body).list[0].addr });
+    componentDidMount() {
+        const { RequestActions } = this.props
+        RequestActions.getPost('1').then(response=>console.log(response));
     }
 
     render() {
         return (
             <div>
                 RequestContainer<br/>
-                {this._handleData()}
-                {console.log(this.state['d'])}  
-                {`Data here ${this.props}`} 
             </div>
         )
     }
 }
 
 export default connect(
-    (state) => ({
-        // data: state.post
-    }),
-    null
+    (state) => ({}),
+    (dispatch) => ({
+        RequestActions: bindActionCreators(requestActions, dispatch)
+    })
 )(RequestContainer)

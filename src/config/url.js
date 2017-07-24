@@ -5,6 +5,6 @@ queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent(
 queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent(`1`); /* 페이지 번호 */
 queryParams += '&' + encodeURIComponent('_returnType') + '=' + encodeURIComponent('json'); /* 페이지 번호 */
 
-url = url + queryParams;
+const URL = url + queryParams;
 
-export default url  
+export default URL  
