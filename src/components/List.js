@@ -11,7 +11,7 @@ class List extends Component {
         const { items } = data.toJS().data;
 
         const itemList = items.map((item, index)=>
-            <div key={index}><Link to='/Detail'><Li>{item.name}</Li></Link></div>
+            <div key={index}><Link to={`/Detail:${index}`}><Li>{index}{item.name}</Li></Link></div>
         );
         return (
             <Wrapper> { itemList } </Wrapper>
