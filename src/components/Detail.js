@@ -34,7 +34,7 @@ Detail.propTypes = {
 
 const Wrapper = styled.div`
     font-size: 1em;
-    background: papayawhip;
+    background: rgb(87.4%, 93.6%, 100%);
     border: 3px dotted red;
     height: 100vh;
 `
