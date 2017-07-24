@@ -11,14 +11,16 @@ class Detail extends Component {
 
         return (
             <Wrapper>
-                <Item> {items[index].name}</Item>
-                <Item>장르: {items[index].content}</Item>
-                <Item>요금: {items[index].fee}</Item>
-                <Item>전화번호: {items[index].phone}</Item>
-                <Item>시작 날짜: {items[index].startDay}</Item>
-                <Item>끝나는 날짜: {items[index].endDay}</Item>
-                <Item>주소: {items[index].addr}</Item>
-                <Item>예매: {items[index].bookInfo}</Item>
+                <Container>
+                    <Title> {items[index].name}</Title>
+                    <Item>장르: {items[index].content}</Item>
+                    <Item>요금: {items[index].fee}</Item>
+                    <Item>전화번호: {items[index].phone}</Item>
+                    <Item>시작 날짜: {items[index].startDay}</Item>
+                    <Item>끝나는 날짜: {items[index].endDay}</Item>
+                    <Item>주소: {items[index].addr}</Item>
+                    <Item>예매: {items[index].bookInfo}</Item>
+                </Container>
             </Wrapper>
         )
     }
@@ -31,9 +33,28 @@ Detail.propTypes = {
 }
 
 const Wrapper = styled.div`
+    font-size: 1em;
+    background: papayawhip;
+    border: 3px dotted red;
+    height: 100vh;
+`
+
+const Container = styled.div`
+    margin: 0 8rem;
+    background: white;
 `
 
 const Item = styled.div`
+    padding:16px;
+    color: darkslategray;
+`
+
+    // background: papayawhip;
+const Title = styled.div`
+    padding:16px;
+    color: darkslategray;
+    font-size: 2em;
+    text-align: center;
 `
 
 
