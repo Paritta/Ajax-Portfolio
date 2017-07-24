@@ -9,7 +9,7 @@ class ListContainer extends Component {
 
         return (
             <div>
-                ListContainer<br/>
+                {/* ListContainer<br/> */}
                 <List data = {data}/>
             </div>
         )
