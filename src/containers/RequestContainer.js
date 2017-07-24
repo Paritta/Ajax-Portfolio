@@ -21,7 +21,11 @@ class RequestContainer extends Component {
 }
 
 export default connect(
-    (state) => ({}),
+    (state) => ({
+        request: state.request.data,
+        loading: state.request.pending,
+        error: state.request.error
+    }),
     (dispatch) => ({
         RequestActions: bindActionCreators(requestActions, dispatch)
     })

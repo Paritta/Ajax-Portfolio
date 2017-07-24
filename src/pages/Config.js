@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import RequestContainer from '../containers/RequestContainer';
+import ListContainer from '../containers/ListContainer';
 
 class Config extends Component {
     render() {
@@ -8,6 +9,7 @@ class Config extends Component {
             <div>
                 <Header/>
                 <RequestContainer/> 
+                <ListContainer/>
             </div>
         );
     }
