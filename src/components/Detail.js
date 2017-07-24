@@ -11,7 +11,14 @@ class Detail extends Component {
 
         return (
             <Wrapper>
-                 {items[index].name}
+                <Item> {items[index].name}</Item>
+                <Item>장르: {items[index].content}</Item>
+                <Item>요금: {items[index].fee}</Item>
+                <Item>전화번호: {items[index].phone}</Item>
+                <Item>시작 날짜: {items[index].startDay}</Item>
+                <Item>끝나는 날짜: {items[index].endDay}</Item>
+                <Item>주소: {items[index].addr}</Item>
+                <Item>예매: {items[index].bookInfo}</Item>
             </Wrapper>
         )
     }
@@ -24,6 +31,9 @@ Detail.propTypes = {
 }
 
 const Wrapper = styled.div`
+`
+
+const Item = styled.div`
 `
 
 
