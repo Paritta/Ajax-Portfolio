@@ -6,10 +6,9 @@ class DetailContainer extends Component {
 
     render() {
         const { data } = this.props;
-
         return (
             <div>
-                <Detail data = {data}/>
+                <Detail data={data} index={this.props.index}/>
             </div>
         )
     }

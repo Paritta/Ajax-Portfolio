@@ -6,11 +6,13 @@ import styled from 'styled-components';
 class Detail extends Component {
 
     render() {
-        const { data } = this.props;
+        const { data, index } = this.props;
         const { items } = data.toJS().data;
 
         return (
-            <Wrapper> Detail in Container </Wrapper>
+            <Wrapper>
+                 {items[index].name}
+            </Wrapper>
         )
     }
 }

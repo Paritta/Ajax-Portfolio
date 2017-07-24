@@ -4,13 +4,14 @@ import DetailContainer from '../containers/DetailContainer';
 
 class Detail extends Component {
     render() {
+        let index = Number(this.props.match.params.index.substr(1));
         return (
             <div>
                 <Header/>
-                <DetailContainer/>
-                Detail
-                {/* {console.log(this.props.match.params.index)} */}
+                <DetailContainer index={index}/>
+                 {/* {console.log(typeof Number(this.props.match.params.index.substr(1)))}  */}
                  {/* {typeof this.props.match.params.index}  */}
+
             </div>
         );
     }
