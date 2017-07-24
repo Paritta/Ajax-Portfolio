@@ -8,6 +8,7 @@ class RequestContainer extends Component {
     componentDidMount() {
         const { RequestActions } = this.props
         RequestActions.getPost('1').then(response=>console.log(response));
+        //응답이 없네.
     }
 
     render() {

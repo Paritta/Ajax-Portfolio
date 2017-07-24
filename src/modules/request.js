@@ -15,9 +15,8 @@ export const getPost = (postId) => dispatch => {
     dispatch({type: GET_POST_PENDING});
     return getPostAPI(URL).then(
         (response) => {
-            console.log('1');
-            console.log(URL);
-            console.log(response);
+            console.log(`URL is ... ${URL}`);
+            console.log(response.data.list[0]);
             dispatch({
                 type: GET_POST_SUCCESS,
                 payload: response
@@ -31,13 +30,13 @@ export const getPost = (postId) => dispatch => {
     })
 }
 
-const initialState = {
+const initialState = Map({
     pending: false,
     error: false,
     data: Map({
         items: [] 
     })
-}
+})
 
 export default handleActions({
     [GET_POST_PENDING]: (state, action) => {
