@@ -44,7 +44,6 @@ export default handleActions({
                     .set('error', false)
     },
     [GET_POST_SUCCESS]: (state, action) => {
-        console.log(action.payload.data);
         const { list } = action.payload.data;
         return state.setIn(['data', 'items'], list)
     },
