@@ -34,11 +34,7 @@ const initialState = Map({
     pending: false,
     error: false,
     data: Map({
-        items: [
-            {
-                "favorite": false
-            }
-        ] 
+        items:  []
     })
 })
 

@@ -4,6 +4,7 @@ import Container from '../components/Container';
 import RequestContainer from '../containers/RequestContainer';
 import ListContainer from '../containers/ListContainer';
 import ViewSelectorContainer from '../containers/ViewSelectorContainer';
+import FreeListContainer from '../containers/FreeListContainer';
 import { connect } from 'react-redux';
 
 class Config extends Component {
@@ -20,7 +21,7 @@ class Config extends Component {
                     <ListContainer/>
                 </Container>
                 <Container visible={view==='favorite'}>
-                    {/* <FavoriteContainer/> */}
+                     <FreeListContainer/> 
                 </Container>
             </div>
         );
