@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import oc from 'open-color';
 
 const Home = props => (
     <Wrapper>
@@ -24,6 +25,10 @@ const Button = styled.button`
     border-radius: 3px;
     font-size: 1.2em;
     margin-top: 2rem;
+
+    &:hover{
+        background: ${oc.pink[0]};
+    }
 `
 
 export default Home

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import styled from 'styled-components';
+import oc from 'open-color';
 
 class Detail extends Component {
 
@@ -34,14 +35,12 @@ Detail.propTypes = {
 
 const Wrapper = styled.div`
     font-size: 1em;
-    background: rgb(87.4%, 93.6%, 100%);
-    border: 3px dotted red;
+    background: ${oc.pink[0]};
     height: 100vh;
 `
 
 const Container = styled.div`
     margin: 0 8rem;
-    background: white;
 `
 
 const Item = styled.div`
@@ -52,7 +51,7 @@ const Item = styled.div`
     // background: papayawhip;
 const Title = styled.div`
     padding:16px;
-    color: darkslategray;
+    color: lightsteelblue;
     font-size: 2em;
     text-align: center;
 `
