@@ -4296,6 +4296,10 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+open-color@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/open-color/-/open-color-1.5.1.tgz#f9ffb29add7e62f75577545fa8b38d265f347049"
+
 opn@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/opn/-/opn-4.0.2.tgz#7abc22e644dff63b0a96d5ab7f2790c0f01abc95"

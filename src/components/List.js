@@ -1,22 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import ListItem from './ListItem';
 
-class List extends Component {
+const List= ({data}) => {
+    const { items } = data.toJS().data;
 
-    render() {
-        const { data } = this.props;
-        const { items } = data.toJS().data;
-
-        const itemList = items.map((item, index)=>
-            <div key={index}><Link to={`/Detail:${index}`}><Li>{index}{item.name}</Li></Link></div>
-        );
-        return (
-            <Wrapper> { itemList } </Wrapper>
-        )
-    }
+    const itemList = items.map((item, index)=>
+        // <div key={index}><Link to={`/Detail:${index}`}><Li>{item.name}</Li></Link></div>
+        <div key={index}><Link to={`/Detail:${index}`}><ListItem item={item}/></Link></div>
+    );
+    return (
+        <Wrapper> { itemList } </Wrapper>
+    )
 }
 
 List.propTypes = {
@@ -26,13 +24,6 @@ List.propTypes = {
 }
 
 const Wrapper = styled.div`
-`
-
-const Li = styled.div`
-    color: darkgray;
-    padding: 16px;
-    border-bottom: 1px solid darkgray;
-    background: white;
 `
 
 export default List

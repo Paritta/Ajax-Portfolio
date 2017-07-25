@@ -10,9 +10,10 @@ const FreeList = ({data}) => {
                         .filter( // 즐겨찾기 필터링
                             item => item.fee === '무료'
                         ).map(
-                            item => (
+                            (item, index) => (
                                 <FreeItem 
                                     item={item}
+                                    key={index}
                                 />
                             )
                         );
