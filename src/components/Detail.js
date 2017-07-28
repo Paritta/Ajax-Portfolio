@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import styled from 'styled-components';
 import oc from 'open-color';
+import Map from './Map';
 
 class Detail extends Component {
 
@@ -12,6 +13,16 @@ class Detail extends Component {
 
         return (
             <Wrapper>
+                <MapContainer>
+                    <Map
+                        containerElement={
+                            <div style={{ height: `100%` }} />
+                        }
+                        mapElement={
+                            <div style={{ height: `100%` }} />
+                        }
+                    />
+                </MapContainer>
                 <Container>
                     <Title> {items[index].name}</Title>
                     <Item>장르: {items[index].content}</Item>
@@ -39,7 +50,11 @@ const Wrapper = styled.div`
     height: 100vh;
 `
 
+const MapContainer = styled.div`
+    height: 50vh;
+`
 const Container = styled.div`
+    height: 50vh;
     margin: 0 8rem;
 `
 
@@ -55,6 +70,5 @@ const Title = styled.div`
     font-size: 2em;
     text-align: center;
 `
-
 
 export default Detail
