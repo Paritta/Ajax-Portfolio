@@ -14,12 +14,8 @@ const ListItem = ({item, index}) => {
                     <div className="circle"></div>
                     {content}
                 </Content>
-                <Name>
-                    {name}
-                </Name>
-                <StartDay>
-                    {startDay}
-                </StartDay>
+                <Name> {name} </Name>
+                <StartDay> {startDay} </StartDay>
             </Info>
             <CircleButton>
                  <Link to={`/Detail:${index}`}> 

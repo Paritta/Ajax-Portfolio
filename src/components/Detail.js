@@ -23,15 +23,15 @@ class Detail extends Component {
                         }
                     />
                 </MapContainer>
+                <Address>{items[index].addr}</Address>
                 <Container>
                     <Title> {items[index].name}</Title>
-                    <Item>장르: {items[index].content}</Item>
+                    <Note> ※{items[index].note} </Note>
                     <Item>요금: {items[index].fee}</Item>
-                    <Item>전화번호: {items[index].phone}</Item>
-                    <Item>시작 날짜: {items[index].startDay}</Item>
-                    <Item>끝나는 날짜: {items[index].endDay}</Item>
-                    <Item>주소: {items[index].addr}</Item>
-                    <Item>예매: {items[index].bookInfo}</Item>
+                    <Item>{items[index].endDay} 마지막</Item>
+                    <Item>주차 {items[index].parking} </Item>
+                    <Item> {items[index].phone}</Item>
+                    <Button>예매하러 가기</Button>
                 </Container>
             </Wrapper>
         )
@@ -44,10 +44,48 @@ Detail.propTypes = {
     })
 }
 
+const Note = styled.div`
+    position: relative;
+    bottom: 10px;
+    left: 20px;
+    color: darkgray;
+    font-size: 1.2em;
+    font-family: 'Nanum Pen Script', cursive;
+`
+
+const Address = styled.div`
+    padding:16px;
+    color: darkgray;
+    font-size: 1.5em;
+    font-family: 'Nanum Pen Script', cursive;
+    text-align: center;
+`
+
+const Title = styled.div`
+    padding:16px;
+    color: palevioletred;
+    font-size: 2.5em;
+    font-family: 'Nanum Pen Script', cursive;
+`
+
+const Button = styled.button`
+    background: white;
+    padding: 0.8em 9em;
+    border: 3px solid palevioletred;
+    color: palevioletred;
+    border-radius: 3px;
+    font-size: 1.2em;
+    margin-top: 3rem;
+
+    &:hover{
+        background: ${oc.gray[0]};
+    }
+`
+
 const Wrapper = styled.div`
     font-size: 1em;
     background: ${oc.pink[0]};
-    height: 100vh;
+    height: 120vh;
 `
 
 const MapContainer = styled.div`
@@ -56,18 +94,13 @@ const MapContainer = styled.div`
 const Container = styled.div`
     height: 50vh;
     margin: 0 8rem;
+    border: 5px solid palevioletred;
+    padding: 2rem;
 `
 
 const Item = styled.div`
     padding:16px;
     color: darkslategray;
-`
-
-const Title = styled.div`
-    padding:16px;
-    color: lightsteelblue;
-    font-size: 2em;
-    text-align: center;
 `
 
 export default Detail

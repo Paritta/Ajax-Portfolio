@@ -27,7 +27,7 @@ const Button = styled.button`
     margin-top: 2rem;
 
     &:hover{
-        background: ${oc.pink[0]};
+        background: ${oc.gray[0]};
     }
 `
 
