@@ -8,7 +8,6 @@ const List= ({data}) => {
     const { items } = data.toJS().data;
 
     const itemList = items.map((item, index)=>
-        // <div key={index}><Link to={`/Detail:${index}`}><Li>{item.name}</Li></Link></div>
         <div key={index}><ListItem item={item} index={index}/></div>
     );
     return (

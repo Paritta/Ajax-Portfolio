@@ -63,7 +63,6 @@ const Item = styled.div`
     color: darkslategray;
 `
 
-    // background: papayawhip;
 const Title = styled.div`
     padding:16px;
     color: lightsteelblue;
