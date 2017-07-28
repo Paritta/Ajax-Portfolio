@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Header = () => (
     <Wrapper>
-        Header
+        공연/전시 정보
     </Wrapper>
 );
 

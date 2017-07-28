@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import StartIcon from 'react-icons/lib/md/star';
+import MoneyOff from 'react-icons/lib/md/money-off';
 import ListIcon from 'react-icons/lib/md/list';
 
 const Item = ({children, selected, name, onSelect}) => (
@@ -26,7 +26,7 @@ const ViewSelector = ({selected, onSelect}) => (
                 selected={selected}
                 onSelect={onSelect}
                 name="favorite">
-                <StartIcon/>
+                <MoneyOff/>
             </Item>
             <Item
                 selected={selected}

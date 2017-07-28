@@ -11,7 +11,7 @@ const Map = withGoogleMap(props => (
             // Pass the map reference here as props
             googleMapURL={googleMapURL}>
             <Marker
-            position={{ lat: 35.17944, lng: 129.07556 }}/>
+            position={{ lat: Number(props.lat), lng: Number(props.lng) }}/>
         </GoogleMap>
     </div>
 ));

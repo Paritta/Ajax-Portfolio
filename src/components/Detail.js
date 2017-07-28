@@ -15,6 +15,8 @@ class Detail extends Component {
             <Wrapper>
                 <MapContainer>
                     <Map
+                        lat={items[index].lat}
+                        lng={items[index].lng}
                         containerElement={
                             <div style={{ height: `100%` }} />
                         }
@@ -31,7 +33,7 @@ class Detail extends Component {
                     <Item>{items[index].endDay} 마지막</Item>
                     <Item>주차 {items[index].parking} </Item>
                     <Item> {items[index].phone}</Item>
-                    <Button>예매하러 가기</Button>
+                    <a href={items[index].bookInfo}><Button>예매하러 가기</Button></a>
                 </Container>
             </Wrapper>
         )

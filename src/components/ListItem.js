@@ -75,7 +75,7 @@ const CircleButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 2rem;
+    top: 4.0rem;
     right: 3rem;
     width: 3rem;
     height: 3rem;
