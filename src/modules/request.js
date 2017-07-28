@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import axios from 'axios';
 import { Map } from 'immutable';
-import URL from '../config/URL'
+import URL from '../config/url'
 
 function getPostAPI(URL) {
     return axios.get(URL)
@@ -16,13 +16,16 @@ export const getPost = (postId) => dispatch => {
     return getPostAPI(URL).then(
         (response) => {
             console.log(`URL is ... ${URL}`);
-            console.log(response.data.list[0]);
+            // console.log(response.data.list[0]);
+            console.log(response);
+            
             dispatch({
                 type: GET_POST_SUCCESS,
-                payload: response
+                // payload: response
             })
         }
     ).catch(error => {
+        console.log(error);
         dispatch({
             type: GET_POST_FAILURE,
             payload: error
@@ -38,14 +41,15 @@ const initialState = Map({
     })
 })
 
+// const { list } = action.payload.data;
+// return state.setIn(['data', 'items'], list)
+
 export default handleActions({
     [GET_POST_PENDING]: (state, action) => {
         return state.set('pending', true)
                     .set('error', false)
     },
     [GET_POST_SUCCESS]: (state, action) => {
-        const { list } = action.payload.data;
-        return state.setIn(['data', 'items'], list)
     },
     [GET_POST_FAILURE]: (state, action) => {
         return state.set('pending', false)

@@ -6,8 +6,9 @@ import * as requestActions from '../modules/request';
 class RequestContainer extends Component {
 
     componentDidMount() {
-        const { RequestActions } = this.props
+        const { RequestActions, error } = this.props
         RequestActions.getPost('1').then(response=>console.log(response));
+        console.log(error);
     }
 
     render() {
@@ -18,11 +19,12 @@ class RequestContainer extends Component {
     }
 }
 
+// request: state.request.data,
+
 export default connect(
     (state) => ({
-        request: state.request.data,
         loading: state.request.pending,
-        error: state.request.error
+        error: state.request.error,
     }),
     (dispatch) => ({
         RequestActions: bindActionCreators(requestActions, dispatch)
