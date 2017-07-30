@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import axios from 'axios';
 import { Map } from 'immutable';
-import URL from '../config/URL'
+import URL from '../config/url'
 
 function getPostAPI(URL) {
     return axios.get(URL)
